@@ -1,7 +1,7 @@
 
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter/material.dart';
-// import 'package:numberpicker/numberpicker.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,9 +9,8 @@ class HomePage extends StatefulWidget {
 }
   TextStyle sty = TextStyle(fontSize:90, color: Colors.white, fontWeight: FontWeight.w200);
 class _HomePageState extends State<HomePage> {
-
   List<String>  options = ["Temperature","Humidity", 'Electricity', 'Router'];
-  int _currentValue = 0;
+  int _currentValue = 24;
   List<String> roomlist = ['Living Room', 'Bedroom', 'Kitchen'];
   Map<String, dynamic> option = {
     'Temperature': [Icon(Icons.wb_sunny, size: 40, color: Colors.grey, ), Text("24°c", style:sty,),Icon(Icons.wb_sunny, size: 15, color: Colors.grey, )],
@@ -25,6 +24,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 // border: Border.all(style:BorderStyle.solid)
               ),
-              margin: EdgeInsets.only(left:150),
+              margin: EdgeInsets.only(left:145),
               width: MediaQuery.of(context).size.width,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
